@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://gba3pnwwv3nh"]
+
+[ext_resource type="Texture2D" uid="uid://b58ux1iltlck3" path="res://cb205e1b8751facd83ab6e776c927e33.jpg" id="1_m8vma"]
+[ext_resource type="Script" uid="uid://ckxcuxnmb6dko" path="res://character_body_2d.gd" id="2_8e4nr"]
+[ext_resource type="Texture2D" uid="uid://df4c86qjqx1ub" path="res://pngtree-spider-web-spiderweb-s-spiderman-cobweb-clipart-cartoon-icon-illust-vector-png-image_3234488.jpg" id="3_b8udh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p5viw"]
+radius = 221.78317
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc63w"]
+size = Vector2(306, 275.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k45de"]
+load_path = "res://.godot/imported/550x550.png-dc0aebe53400face2aa20be9ac07cd13.ctex"
+
+[node name="Node2D" type="Node2D" unique_id=1328860246]
+position = Vector2(0, -4)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1559417041]
+position = Vector2(571.00006, 343)
+scale = Vector2(0.98499995, 1.424)
+texture = ExtResource("1_m8vma")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D" unique_id=1957864878]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=902078406]
+position = Vector2(78, 20)
+script = ExtResource("2_8e4nr")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=188626157]
+position = Vector2(699, 197)
+scale = Vector2(0.51944447, 0.53055555)
+texture = ExtResource("3_b8udh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Sprite2D" unique_id=1913127395]
+position = Vector2(-3.8503036, 3.7696261)
+shape = SubResource("CircleShape2D_p5viw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1175314505]
+position = Vector2(220, 323)
+shape = SubResource("RectangleShape2D_jc63w")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1421361793]
+position = Vector2(428, 46)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Area2D" unique_id=1842252976]
+position = Vector2(-137, 262)
+scale = Vector2(0.50722015, 0.5934115)
+texture = SubResource("CompressedTexture2D_k45de")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1511084313]
+format = 2

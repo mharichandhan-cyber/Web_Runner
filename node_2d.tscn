@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://4pqund3nukl7"]
+
+[ext_resource type="Script" uid="uid://ckxcuxnmb6dko" path="res://character_body_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://b58ux1iltlck3" path="res://cb205e1b8751facd83ab6e776c927e33.jpg" id="1_0hol4"]
+[ext_resource type="Texture2D" uid="uid://bvnhwgv21rtm3" path="res://images.jpg" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://df4c86qjqx1ub" path="res://pngtree-spider-web-spiderweb-s-spiderman-cobweb-clipart-cartoon-icon-illust-vector-png-image_3234488.jpg" id="3_epypp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p5viw"]
+radius = 221.78317
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc63w"]
+size = Vector2(306, 275.5)
+
+[node name="Node2D" type="Node2D" unique_id=1328860246]
+position = Vector2(0, -4)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1559417041]
+position = Vector2(571.00006, 343)
+scale = Vector2(0.98499995, 1.424)
+texture = ExtResource("1_0hol4")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=902078406]
+position = Vector2(78, 20)
+script = ExtResource("1_0e48y")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=188626157]
+position = Vector2(699, 197)
+scale = Vector2(0.51944447, 0.53055555)
+texture = ExtResource("3_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Sprite2D" unique_id=1913127395]
+position = Vector2(-9.625706, 1.8848095)
+shape = SubResource("CircleShape2D_p5viw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1175314505]
+position = Vector2(192, 287.25)
+shape = SubResource("RectangleShape2D_jc63w")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1421361793]
+position = Vector2(428, 46)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Area2D" unique_id=1842252976]
+position = Vector2(-170, 281)
+scale = Vector2(0.50722015, 0.5934115)
+texture = ExtResource("1_wtcfe")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1511084313]
+format = 2
